@@ -208,11 +208,11 @@
 
 
 ### Some Examples
-- [mouseIsPressed](examples/mouse.html)
+- [mouseIsPressed](https://editor.p5js.org/mbnelson86/sketches/LbjLKyRHw)
 
     ```
     function setup() {
-        createCanvas(400, 400);
+        createCanvas(800, 800);
     }
 
     function draw() {
