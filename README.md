@@ -295,6 +295,39 @@ open the links to go to the online p5js editor where you can see the example in 
         text('hello world', frameCount%width, 100)
     }
     ```
+- [For-loop Mandala](https://editor.p5js.org/mbnelson86/sketches/2ggr0jNdm)
+    - use a for loop and `rotate()` to create a colorful spinning wheel thing out of simple lines
+    ```
+    let deg = 0;
+    let w = 100;
+    let h = 100;
+
+    function setup() {
+        createCanvas(800, 800);
+    }
+
+    function draw() {
+        background(0, 5);
+        stroke('magenta');
+        strokeWeight(10)
+        translate(400,400);
+        for(let i=0; i< 10; i++) {
+            rotate(deg);
+            line(0,0, w, h);
+            push()
+            translate(w,h);
+            rotate(-deg)
+            stroke('yellow');
+            line(0,0, w,h) ;
+            translate(w, h);
+            stroke('turquoise')
+            rotate(deg*4)
+            line(0, 0, w, h)
+            pop();
+        }
+        deg += 0.01;
+    }
+    ``` 
 - [Bouncing Ball](https://editor.p5js.org/mbnelson86/sketches/1AnzaPPn8)
     - super simple collision detection
     ```
@@ -302,24 +335,62 @@ open the links to go to the online p5js editor where you can see the example in 
     let inc = 5;
 
     function setup() {
-    createCanvas(400, 400);
+        createCanvas(400, 400);
     }
 
     function draw() {
-    background(220);
-    fill(0);
-    rect(x, 100, 10, 10);
-    x += inc;
-    if (x > width || x < 0){
-        inc *= -1;
-    } 
+        background(220);
+        fill(0);
+        rect(x, 100, 10, 10);
+        x += inc;
+        if (x > width || x < 0){
+            inc *= -1;
+        } 
+    }
+    ```
+- [Color Grid](https://editor.p5js.org/mbnelson86/sketches/ic-_FOKXH)
+    - uses ES6 class syntax and a nested for loop to generate a grid of squares with random color.
+
+    ```
+    let things = [];
+
+    function setup() {
+        createCanvas(400, 400);
+            for (let i = 0; i < 20; i++) {
+            for (let j = 0; j < 20; j ++){
+            let color = [random(255), random(255), random(255)];
+            const thing = new Thing(i *20 , j *20, 10, color);
+            things.push(thing); 
+            }
+        }
+    }
+
+    function draw() {
+        background(0);
+        translate(5,5);
+        for (t of things){
+            t.show();
+        }
+    }
+
+    class Thing {
+        constructor(x, y, size, color){
+            this.x = x;
+            this.y = y;
+            this.size = size;
+            this.color = color;
+        }
+        
+        show () {
+            fill(color(this.color));
+            rect(this.x, this.y, this.size);
+        }
     }
     ```
 - [Collision Detection - Array of Objects](https://editor.p5js.org/mbnelson86/sketches/kpl8np_9P)
     - Uses ES6 class syntax to create multipe ball objects that detect collisions with each other
     ```
     let things = [];
-
 
     function setup() {
         createCanvas(800, 500);
@@ -331,7 +402,6 @@ open the links to go to the online p5js editor where you can see the example in 
 
     function draw() {
         background(220);
-
         for (let thing of things){
             thing.show();
             thing.move();
@@ -342,7 +412,6 @@ open the links to go to the online p5js editor where you can see the example in 
             }
         }
     }
-
 
     class Thing {
         constructor(x, y, r){
