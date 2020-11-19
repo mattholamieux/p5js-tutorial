@@ -1,5 +1,16 @@
 ## Creative Coding with P5.js
 
+p5js is a javascript library for working with the HTML canvas. It is great for creating visual art, graphic design, and animation with code. 
+
+### First thing's first
+
+- p5js has a great web-based code editor here: 
+    - https://editor.p5js.org/
+- if you prefer to work in your own editor, you can download the library or grab a link to the CDN here: 
+    - https://p5js.org/download/
+- p5js has excellent documentation here: 
+    - https://p5js.org/reference/
+
 ### Setup and Draw
 
 - All p5 sketches contain two default functions: `setup()` and `draw()`
@@ -187,8 +198,38 @@
 - Wanna know a cool trick? If you pass a second argument to `background()` this will change the alpha value. If you set it to a lower value (e.g. `background(0, 10)`), it will create a cool trailing effect. 
 
 
-### Other useful p5 methods and variables
+### Useful p5 methods and variables
 
+- `createCanvas(width, height)`
+    - attaches an html canvas to the DOM.
+- `background(string/hex/rgb)`
+    - sets the background color. 
+    - note that colors can be specified as a string `('white')`, as a hex value `('#fff')`, or as rgb values `(255, 255, 255)`;
+- `fill(string/hex/rgb)`
+    - fills element(s) with specified color.
+- `stroke(string/hex/rgb)`
+    - draws element(s) with the specified stroke color.
+- `strokeWeight(pixels)`
+    - draws element(s) with the specified stroke weight.
+- `noStroke()`
+    - draws element(s) without any stroke.
+- `circle(x, y, diameter)`
+    - draws a cirle at x/y position, with specified diameter.
+- `line(x1, y1, x2, y2)` 
+    - draws a line between two points.
+- `rect(x, y, width, height)`
+    - draws a rectangle at x/y position with the specified width and height
+- `point(x, y)`
+    - draws a single point at the specified x/y location. 
+    - note that the size of the point can be changed by setting `strokeWeight()` calling `point()`
+- `triangle(x1, y1, x2, y2, x3, y3)`
+    - draws a triangle by connecting the three points specified as arguments
+- `rotate(angle)`
+    - rotates element(s) by degrees. 
+- `scale(size)`
+    - scales element(s) by percent, where 1.0 = 100%
+- `translate(x, y)`
+    - displaces element(s) by number of pixels on x/y axis
 - `random(min, max)`
     - an easy way to generate a random floating-point number between two numbers. If only one argument is passed, will generate float between 0 and that number
 - `mouseX` and `mouseY`
