@@ -328,6 +328,45 @@ open the links to go to the online p5js editor where you can see the example in 
         deg += 0.01;
     }
     ``` 
+- [Colorful Can O' Worms](https://editor.p5js.org/mbnelson86/sketches/1kJo2Xl2d)
+    - rotate + translate + rectangle, repeat
+    ```
+    let w = 20;
+    let h = 20;
+    let a = 0;
+    let s = 0.02;
+    let c1 = "magenta";
+    let c2 = "green";
+
+
+    function setup() {
+        createCanvas(400, 400);
+    }
+
+    function draw() {
+        background(0,5);
+        fill(c1);
+        noStroke();
+        translate(width/2, height/2);
+        rotate(a);
+        rect(0, 0, w, h);
+        for (let i =0; i<5; i++){
+            fill(c1);
+            translate(w, h);
+            rotate(a);
+            rect(0, 0, w, h);
+            for (let j=0;j<2;j++){
+                fill(c2);
+                translate(-w, -h);
+                rotate(-a);
+                rect(0, 0, w, h);
+            }
+        }
+        a += s;
+    }
+
+
+    ```
 - [Bouncing Ball](https://editor.p5js.org/mbnelson86/sketches/1AnzaPPn8)
     - super simple collision detection
     ```
