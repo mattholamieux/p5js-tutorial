@@ -16,7 +16,6 @@ p5js is a javascript library for working with the HTML canvas. It is great for c
 - [USEFUL P5 METHODS AND VARIABLES](#useful-p5-methods-and-variables)
 - [EXAMPLES](#some-examples)
 
-
 ### Getting started with p5js
 
 - p5js has a great web-based code editor here: 
@@ -294,5 +293,95 @@ open the links to go to the online p5js editor where you can see the example in 
         textSize(32);
         textFont('roboto');
         text('hello world', frameCount%width, 100)
+    }
+    ```
+- [Bouncing Ball](https://editor.p5js.org/mbnelson86/sketches/1AnzaPPn8)
+    - super simple collision detection
+    ```
+    let x = 0;
+    let inc = 5;
+
+    function setup() {
+    createCanvas(400, 400);
+    }
+
+    function draw() {
+    background(220);
+    fill(0);
+    rect(x, 100, 10, 10);
+    x += inc;
+    if (x > width || x < 0){
+        inc *= -1;
+    } 
+    }
+    ```
+- [Collision Detection - Array of Objects](https://editor.p5js.org/mbnelson86/sketches/kpl8np_9P)
+    - Uses ES6 class syntax to create multipe ball objects that detect collisions with each other
+    ```
+    let things = [];
+
+
+    function setup() {
+        createCanvas(800, 500);
+        for (let i = 0; i < 5; i++){
+            let thing = new Thing(i * 100 + 50, i*50 +50, 40, 40)
+            things.push(thing);
+        }   
+    }
+
+    function draw() {
+        background(220);
+
+        for (let thing of things){
+            thing.show();
+            thing.move();
+            for (let other of things){
+                if (thing !== other){
+                    thing.collision(other); 
+                }
+            }
+        }
+    }
+
+
+    class Thing {
+        constructor(x, y, r){
+            this.x = x;
+            this.y = y;
+            this.r = r;
+            this.xVel = random(2);
+            this.yVel = random(3);
+            this.color = 255;
+        }
+        
+        show() {
+            fill(color(this.color));
+            ellipse(this.x, this.y, this.r);
+        }
+        
+        move() {
+            this.x += this.xVel;
+            this.y += this.yVel;
+            
+            if (this.x > width-this.r/2 || this.x < this.r/2){
+            this.xVel *=-1;
+            }
+            if (this.y > height-this.r/2 || this.y < this.r/2){
+            this.yVel *=-1;
+            }
+        }
+        
+        changeColor(){
+            this.color = [random(255), random(255), random(255)];
+        }
+        
+        collision(other) {
+            let d = (dist(this.x, this.y, other.x, other.y));
+            if (d < this.r/2 + other.r/2){
+                this.changeColor();
+                this.xVel *= -1;
+                this.yVel *= -1;
+            }
+        } 
     }
     ```
