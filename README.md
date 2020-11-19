@@ -2,7 +2,22 @@
 
 p5js is a javascript library for working with the HTML canvas. It is great for creating visual art, graphic design, and animation with code. 
 
-### First thing's first
+- [INTRO TO P5 WALKTHROUGH]()
+    - [getting started](#getting-set-up-with-p5js)
+    - [setup and draw](#setup-and-draw)
+    - [drawing on the canvas](#drawing-on-the-canvas)
+    - [stroke and fill](#stroke-and-fill)
+    - [the draw loop](#a-closer-look-at-the-draw-loop)
+    - [clearing the background](#clearing-the-background)
+    - [other shapes](#other-shapes)
+    - [global values](#a-note-about-global-values)
+    - [transformations](#applying-transformations)
+    - [basic animation](#basic-animation)
+- [USEFUL P5 METHODS AND VARIABLES](#useful-p5-methods-and-variables)
+- [EXAMPLES](#some-examples)
+
+
+### Getting started with p5js
 
 - p5js has a great web-based code editor here: 
     - https://editor.p5js.org/
