@@ -2,7 +2,7 @@
 
 p5js is a javascript library for working with the HTML canvas. It is great for creating visual art, graphic design, and animation with code. 
 
-- [INTRO TO P5 WALKTHROUGH]()
+- INTRO TO P5 WALKTHROUGH
     - [getting started](#getting-set-up-with-p5js)
     - [setup and draw](#setup-and-draw)
     - [drawing on the canvas](#drawing-on-the-canvas)
