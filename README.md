@@ -203,13 +203,15 @@
     - system variable that stores the height of the drawing canvas
 - `frameCount`
     - system variable that store the number of frames that have passed since the program started
-- `text()`
+- `text(string, x, y)`
     - a method that allows for easily drawing text to the canvas. Can be altered with `textSize()`, `textFont()`, `textStyle()`, and `fill()`.
 
 
 ### Some Examples
-- [mouseIsPressed](https://editor.p5js.org/mbnelson86/sketches/LbjLKyRHw)
+open the links to go to the online p5js editor where you can see the example in action and modify it yourself.
 
+- [mouseIsPressed](https://editor.p5js.org/mbnelson86/sketches/LbjLKyRHw)
+    - uses a conditional statement and the `mouseIsPressed` variable to draw circles of different colors to the canvas.
     ```
     function setup() {
         createCanvas(800, 800);
@@ -217,10 +219,24 @@
 
     function draw() {
         if (mouseIsPressed) {
-            fill(0);
+            fill('cyan');
         } else {
-            fill(255);
+            fill('yellow');
         }
         circle(mouseX, mouseY, 50);
+    }
+    ```
+- [Ticker Tape](https://editor.p5js.org/mbnelson86/sketches/DDk08OMc9)
+    - uses `frameCount % width` to create a counter that resets once it reaches the width of the screen, and uses this to animate text across the screen. 
+    ```
+    function setup() {
+        createCanvas(400, 400);
+    }
+
+    function draw() {
+        background(220);
+        textSize(32);
+        textFont('roboto');
+        text('hello world', frameCount%width, 100)
     }
     ```
