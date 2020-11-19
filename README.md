@@ -295,6 +295,27 @@ open the links to go to the online p5js editor where you can see the example in 
         text('hello world', frameCount%width, 100)
     }
     ```
+- [Bouncing Ball](https://editor.p5js.org/mbnelson86/sketches/1AnzaPPn8)
+    - super simple collision detection
+    ```
+    let x = 0;
+    let inc = 5;
+
+    function setup() {
+        createCanvas(400, 400);
+    }
+
+    function draw() {
+        background(220);
+        fill(0);
+        rect(x, 100, 10, 10);
+        x += inc;
+        if (x > width || x < 0){
+            inc *= -1;
+        } 
+    }
+    ```
+    
 - [For-loop Mandala](https://editor.p5js.org/mbnelson86/sketches/2ggr0jNdm)
     - use a for loop and `rotate()` to create a colorful spinning wheel thing out of simple lines
     ```
@@ -364,29 +385,8 @@ open the links to go to the online p5js editor where you can see the example in 
         }
         a += s;
     }
-
-
     ```
-- [Bouncing Ball](https://editor.p5js.org/mbnelson86/sketches/1AnzaPPn8)
-    - super simple collision detection
-    ```
-    let x = 0;
-    let inc = 5;
 
-    function setup() {
-        createCanvas(400, 400);
-    }
-
-    function draw() {
-        background(220);
-        fill(0);
-        rect(x, 100, 10, 10);
-        x += inc;
-        if (x > width || x < 0){
-            inc *= -1;
-        } 
-    }
-    ```
 - [Color Grid](https://editor.p5js.org/mbnelson86/sketches/ic-_FOKXH)
     - uses ES6 class syntax and a nested for loop to generate a grid of squares with random color.
 
