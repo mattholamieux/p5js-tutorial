@@ -14,8 +14,8 @@ p5js is a javascript library for working with the HTML canvas. It is great for c
     - [transformations](#applying-transformations)
     - [basic animation](#basic-animation)
 - [MAKE A P5js MANDALA](#make-a-p5js-mandala)
-- [USEFUL P5js METHODS AND VARIABLES](#useful-p5-methods-and-variables)
-- [EXAMPLES](#some-examples)
+- [USEFUL P5js METHODS & VARIABLES](#useful-p5js-methods-&-variables)
+- [EXAMPLES](#examples)
 
 ## INTRO TO P5js
 
