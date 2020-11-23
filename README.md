@@ -16,7 +16,7 @@ p5js is a javascript library for working with the HTML canvas. It is great for c
 - [USEFUL P5 METHODS AND VARIABLES](#useful-p5-methods-and-variables)
 - [EXAMPLES](#some-examples)
 
-## INTRO TO P5
+## INTRO TO P5js
 
 ### Some things you'll need
 
@@ -190,7 +190,7 @@ p5js is a javascript library for working with the HTML canvas. It is great for c
   ```
 - It's spinning! Neato torpedo!
 
-## MAKE A MANDALA W/ P5
+## MAKE A MANDALA W/ P5js
 
 A mandala is a circular geometric design with origins in Hindu and Buddhist religious art, though similar patterns can be found in historic and contemporary art from around the world. Mandalas can even be created with code! Check out some of the examples below to see for yourself.
 - [Mandala 1](https://editor.p5js.org/socalledsound/sketches/k8tRkCmiW)
@@ -305,7 +305,7 @@ In this section, we'll try using a javascript for-loop, together with some basic
 **Step Six**
 - From here, try customizing the sketch further. Experiment with different colors, shapes, lengths, translation and rotation amounts.
 
-## USEFUL P5 METHODS & VARIABLES
+## USEFUL P5js METHODS & VARIABLES
 
 - `createCanvas(width, height)`
     - attaches an html canvas to the DOM.
