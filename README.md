@@ -2,8 +2,8 @@
 
 p5js is a javascript library for working with the HTML canvas. It is great for creating visual art, graphic design, and animation with code. 
 
-- INTRO TO P5 WALKTHROUGH
-    - [getting started](#getting-set-up-with-p5js)
+- [INTRO TO P5js](#intro-to-p5js)
+    - [things you'll need](#getting-set-up-with-p5js)
     - [setup and draw](#setup-and-draw)
     - [drawing on the canvas](#drawing-on-the-canvas)
     - [stroke and fill](#stroke-and-fill)
@@ -13,10 +13,13 @@ p5js is a javascript library for working with the HTML canvas. It is great for c
     - [global values](#a-note-about-global-values)
     - [transformations](#applying-transformations)
     - [basic animation](#basic-animation)
-- [USEFUL P5 METHODS AND VARIABLES](#useful-p5-methods-and-variables)
-- [EXAMPLES](#some-examples)
+- [MAKE A P5js MANDALA](#make-a-p5js-mandala)
+- [USEFUL P5js METHODS & VARIABLES](#useful-p5js-methods-&-variables)
+- [EXAMPLES](#examples)
 
-### Getting started with p5js
+## INTRO TO P5js
+
+### Some things you'll need
 
 - p5js has a great web-based code editor here: 
     - https://editor.p5js.org/
@@ -182,37 +185,128 @@ p5js is a javascript library for working with the HTML canvas. It is great for c
         fill('turquoise');
         translate(200, 200);
         rotate(a);
-        rect(0, 0, 5, 100);
+        rect(0, 0, 50, 50);
         a += 0.01;
     }
   ```
 - It's spinning! Neato torpedo!
-- Let's expand on this by adding a second `rect()` and applying different transformations to it. 
-    ```
-    let a = 0;
 
+## MAKE A P5js MANDALA
+
+A mandala is a circular geometric design with origins in Hindu and Buddhist religious art, though similar patterns can be found in historic and contemporary art from around the world. Mandalas can even be created with code! Check out some of the examples below to see for yourself.
+- [Mandala 1](https://editor.p5js.org/socalledsound/sketches/k8tRkCmiW)
+- [Mandala 2](https://editor.p5js.org/angichau/sketches/7DkU6CvNu)
+- [Mandala 3](https://editor.p5js.org/slow_izzm/sketches/Syy9no-kN)
+
+In this section, we'll try using a javascript for-loop, together with some basic p5 methods, to make a colorful and animated mandala.
+
+**Step One**
+- Let's start by creating a canvas that's 500px by 500px. 
+- Then let's use the `translate()` function and the p5 variables `width` and `height` to set the origin for our drawing at the middle of the canvas. 
+- Finally let's draw a line from 0,0 to 100,0.
+    ```
     function setup() {
-      createCanvas(400, 400);
+        createCanvas(500, 500);
+    }
+
+    function draw() {
+        background(220);
+        translate(width/2, height/2)
+        line(0, 0, 100, 0);
+    }
+    ```
+
+**Step Two**
+- Let's apply some color and fill styling.
+    ```
+    function setup() {
+        createCanvas(500, 500);
     }
 
     function draw() {
         background(0);
-        noStroke();
-        fill('turquoise');
-        translate(200, 200);
-        rotate(a);
-        rect(0, 0, 5, 100);
-        fill('pink');
-        translate(0, 100);
-        rotate(-a*2);
-        rect(0, 0, 5, 50);
-        a += 0.01;
+        translate(width/2, height/2);
+        stroke('turquoise');
+        strokeWeight(4);
+        line(0, 0, 100, 0);
     }
-  ```
-- Wanna know a cool trick? If you pass a second argument to `background()` this will change the alpha value. If you set it to a lower value (e.g. `background(0, 10)`), it will create a cool trailing effect. 
+    ```
+**Step Three**
+- Now for the fun part. We're going to use a for-loop and the `rotate()` function, to draw eight lines radiating out from the center. 
+    ```
+    function setup() {
+        createCanvas(500, 500);
+    }
 
+    function draw() {
+        background(0);
+        translate(width/2, height/2);
+        stroke('turquoise');
+        strokeWeight(4);
+        for (let i = 0; i < 8; i++){
+            rotate(PI/4)
+            line(0, 0, 100, 0);
+        }
+    }
+    ```
+**Step Four**
+- Now let's use a variable and the `+=` increment operator to make the entire design rotate around the origin point.
+    ```
+    let angle = 0;
 
-### Useful p5 methods and variables
+    function setup() {
+        createCanvas(500, 500);
+    }
+
+    function draw() {
+        background(0);
+        translate(width/2, height/2);
+        stroke('turquoise');
+        strokeWeight(4);
+        rotate(angle)
+        for (let i = 0; i < 8; i++){
+            rotate(PI/4)
+            line(0, 0, 100, 0);
+        }
+        angle += 0.01;
+    }
+    ```
+**Step Five**
+- Let's make things a bit more interesting by drawing a second set of lines inside our for-loop.
+- We'll make the lines a different color, and use the `angle` variable that we defined in the last step to add an additional rotation point.
+- Notice the use of `push()` and `pop()` before drawing the second line. This prevents the transformations that we use here from affecting the rest of the drawing. 
+    ```
+    let angle = 0;
+
+    function setup() {
+        createCanvas(500, 500);
+    }
+
+    function draw() {
+        background(0);
+        translate(width/2, height/2);
+        stroke('turquoise');
+        strokeWeight(4);
+        rotate(angle)
+        for (let i = 0; i < 8; i++){
+            rotate(PI/4)
+            line(0, 0, 100, 0);
+            push();
+            translate(100,0);
+            rotate(-angle*2);
+            stroke('yellow');
+            line(0, 0, 100, 0);
+            pop();
+        }
+        angle += 0.01;
+    }
+    ```
+- Wanna know a cool trick? If we pass a second argument to background() this will change the alpha value. If we set it to a lower value (e.g. 1-20), this will mean that the sketch is being redrawn with a slightly transparent background each time through the draw loop, and will create a cool trailing effect.
+
+**Step Six**
+- From here, try customizing the sketch further. Experiment with different colors, shapes, lengths, translation and rotation amounts.
+
+## USEFUL P5js METHODS & VARIABLES
 
 - `createCanvas(width, height)`
     - attaches an html canvas to the DOM.
@@ -262,7 +356,7 @@ p5js is a javascript library for working with the HTML canvas. It is great for c
     - a method that allows for easily drawing text to the canvas. Can be altered with `textSize()`, `textFont()`, `textStyle()`, and `fill()`.
 
 
-### Some Examples
+## EXAMPLES
 open the links to go to the online p5js editor where you can see the example in action and modify it yourself.
 
 - [mouseIsPressed](https://editor.p5js.org/mbnelson86/sketches/LbjLKyRHw)
@@ -316,37 +410,32 @@ open the links to go to the online p5js editor where you can see the example in 
     }
     ```
     
-- [For-loop Mandala](https://editor.p5js.org/mbnelson86/sketches/2ggr0jNdm)
+- [For-loop Mandala](https://editor.p5js.org/mbnelson86/sketches/_1XoO5-Z9)
     - use a for loop and `rotate()` to create a colorful spinning wheel thing out of simple lines
     ```
-    let deg = 0;
-    let w = 100;
-    let h = 100;
+    let angle = 0;
 
     function setup() {
-        createCanvas(800, 800);
+        createCanvas(500, 500);
     }
 
     function draw() {
-        background(0, 5);
-        stroke('magenta');
-        strokeWeight(10)
-        translate(400,400);
-        for(let i=0; i< 10; i++) {
-            rotate(deg);
-            line(0,0, w, h);
-            push()
-            translate(w,h);
-            rotate(-deg)
+        background(0, 1);
+        translate(width/2, height/2);
+        stroke('turquoise');
+        strokeWeight(4);
+        rotate(angle)
+        for (let i = 0; i < 8; i++){
+            rotate(PI/4)
+            line(0, 0, 100, 0);
+            push();
+            translate(100,0);
+            rotate(-angle*2);
             stroke('yellow');
-            line(0,0, w,h) ;
-            translate(w, h);
-            stroke('turquoise')
-            rotate(deg*4)
-            line(0, 0, w, h)
+            line(0, 0, 100, 0);
             pop();
         }
-        deg += 0.01;
+        angle += 0.01;
     }
     ``` 
 - [Colorful Can O' Worms](https://editor.p5js.org/mbnelson86/sketches/1kJo2Xl2d)
