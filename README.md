@@ -2,8 +2,8 @@
 
 p5js is a javascript library for working with the HTML canvas. It is great for creating visual art, graphic design, and animation with code. 
 
-- INTRO TO P5 WALKTHROUGH
-    - [getting started](#getting-set-up-with-p5js)
+- [INTRO TO P5js](#intro-to-p5js)
+    - [things you'll need](#getting-set-up-with-p5js)
     - [setup and draw](#setup-and-draw)
     - [drawing on the canvas](#drawing-on-the-canvas)
     - [stroke and fill](#stroke-and-fill)
@@ -13,7 +13,8 @@ p5js is a javascript library for working with the HTML canvas. It is great for c
     - [global values](#a-note-about-global-values)
     - [transformations](#applying-transformations)
     - [basic animation](#basic-animation)
-- [USEFUL P5 METHODS AND VARIABLES](#useful-p5-methods-and-variables)
+- [MAKE A P5js MANDALA](#make-a-p5js-mandala)
+- [USEFUL P5js METHODS AND VARIABLES](#useful-p5-methods-and-variables)
 - [EXAMPLES](#some-examples)
 
 ## INTRO TO P5js
@@ -190,7 +191,7 @@ p5js is a javascript library for working with the HTML canvas. It is great for c
   ```
 - It's spinning! Neato torpedo!
 
-## MAKE A MANDALA W/ P5js
+## MAKE A P5js MANDALA
 
 A mandala is a circular geometric design with origins in Hindu and Buddhist religious art, though similar patterns can be found in historic and contemporary art from around the world. Mandalas can even be created with code! Check out some of the examples below to see for yourself.
 - [Mandala 1](https://editor.p5js.org/socalledsound/sketches/k8tRkCmiW)
