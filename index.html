@@ -1,16 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <title>p5js tutorial</title>
+
+    <link rel="stylesheet" href="reveal/dist/reset.css">
+    <link rel="stylesheet" href="reveal/dist/reveal.css">
+    <link rel="stylesheet" href="reveal/dist/theme/night.css" id="theme">
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="revealplugin/highlight/monokai.css" id="highlight-theme">
     <script src="p5.min.js"></script>
-    <script src="sketch.js"></script>
 </head>
 
 <body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Slide One -->
+            <section data-markdown>
+                <textarea data-template>
+                    ## Slide 1
+                    A paragraph with some text and a [link](http://hakim.se).
+                </textarea>
+            </section>
 
+            <!-- Slide Two -->
+            <section data-markdown>
+                <textarea data-template>
+                    <!-- ## Slide 2 -->
+                    <div id="viz1"></div>
+                </textarea>
+            </section>
+        </div>
+    </div>
+
+    <script src="reveal/dist/reveal.js"></script>
+    <script src="reveal/plugin/notes/notes.js"></script>
+    <script src="reveal/plugin/markdown/markdown.js"></script>
+    <script src="reveal/plugin/highlight/highlight.js"></script>
+    <script type="text/javascript" src="sketch.js"></script>
+
+    <script>
+        Reveal.initialize({
+            hash: true,
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
 </body>
 
 </html>
