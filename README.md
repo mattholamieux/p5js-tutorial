@@ -194,7 +194,7 @@ p5js is a javascript library for working with the HTML canvas. It is great for c
 ## MAKE A P5js MANDALA
 
 A mandala is a circular geometric design with origins in Hindu and Buddhist religious art, though similar patterns can be found in historic and contemporary art from around the world. 
-<div class = "d-flex">
+<div class = "d-flex flex-justify-around">
     <img src="assets/mandala1.jpg" width="150">
     <img src="assets/mandala2.jpg" width="150">
     <img src="assets/mandala3.jpg" width="150">
