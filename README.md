@@ -1,6 +1,6 @@
 ## Creative Coding with P5.js
 
-p5js is a javascript library for working with the HTML canvas. It is great for creating visual art, graphic design, and animation with code. 
+p5js is a javascript library for working with the HTML canvas. It is great for creating visual art, graphic design, and animation with code. This tutorial will provide a basic introduction of how to write code with p5js.
 
 - [INTRO TO P5js](#intro-to-p5js)
     - [things you'll need](#getting-set-up-with-p5js)
@@ -27,6 +27,9 @@ p5js is a javascript library for working with the HTML canvas. It is great for c
     - https://p5js.org/download/
 - p5js has excellent documentation here: 
     - https://p5js.org/reference/
+
+### Creative coding with p5js slides
+- a [slide presentation](https://mattholamieux.github.io/p5js-tutorial/) for introduction creative coding
 
 ### Setup and Draw
 
@@ -195,9 +198,9 @@ p5js is a javascript library for working with the HTML canvas. It is great for c
 
 A mandala is a circular geometric design with origins in Hindu and Buddhist religious art, though similar patterns can be found in historic and contemporary art from around the world. 
 <div class = "d-flex flex-justify-around">
-    <img src="assets/mandala1.jpg" width="150">
-    <img src="assets/mandala2.jpg" width="150">
-    <img src="assets/mandala3.jpg" width="150">
+    <img src="assets/mandala2.jpg" width="150" height="200">
+    <img src="assets/mandala1.jpg" width="150" height="200">
+    <img src="assets/mandala3.jpg" width="150" height="200">
 </div>
 
 Mandalas can even be created with code! Check out some of the examples below to see for yourself.
