@@ -6,7 +6,7 @@ let cnv;
 let angle = 0;
 
 function setup() {
-    cnv = createCanvas(1000, 800);
+    cnv = createCanvas(1000, 600);
     cnv.parent('viz1')
     textSize(60)
     textFont('monospace')
