@@ -29,7 +29,7 @@ p5js is a javascript library for working with the HTML canvas. It is great for c
     - https://p5js.org/reference/
 
 ### Creative coding with p5js slides
-- a [slide presentation](https://mattholamieux.github.io/p5js-tutorial/) for introduction creative coding
+- a [slide presentation](https://mattholamieux.github.io/p5js-tutorial/) for introducing creative coding
 
 ### Setup and Draw
 
