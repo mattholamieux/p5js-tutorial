@@ -1,33 +1,3 @@
-// let angle = 0;
-
-// function setup() {
-//     const cnv = createCanvas(500, 500);
-//     cnv.parent('viz1')
-// }
-
-// function draw() {
-//     background(0, 2);
-//     translate(width / 2, height / 2);
-//     stroke('turquoise');
-//     strokeWeight(4);
-//     rotate(angle)
-//     for (let i = 0; i < 8; i++) {
-//         rotate(PI / 4)
-//         line(0, 0, 100, 0);
-//         push();
-//         translate(0, 0);
-//         rotate(-angle * 2);
-//         stroke('yellow');
-//         line(100, 100, 100, 0);
-//         translate(100, 0);
-//         rotate(angle * 2);
-//         stroke('magenta');
-//         line(0, 100, 100, 0);
-//         pop();
-//     }
-//     angle += 0.01;
-// }
-
 
 const letters = ['c', 'r', 'e', 'a', 't', 'i', 'v', 'e', ' ', 'c', 'o', 'd', 'i', 'n', 'g', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'w', 'i', 't', 'h', ' ', 'p', '5', 'j', 's', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 

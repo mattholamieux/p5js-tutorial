@@ -14,7 +14,7 @@ p5js is a javascript library for working with the HTML canvas. It is great for c
     - [transformations](#applying-transformations)
     - [basic animation](#basic-animation)
 - [MAKE A P5js MANDALA](#make-a-p5js-mandala)
-- [USEFUL P5js METHODS & VARIABLES](#useful-p5js-methods-&-variables)
+- [USEFUL P5js METHODS & VARIABLES](#useful-p5js-methods-and-variables)
 - [EXAMPLES](#examples)
 
 ## INTRO TO P5js
@@ -306,7 +306,7 @@ In this section, we'll try using a javascript for-loop, together with some basic
 **Step Six**
 - From here, try customizing the sketch further. Experiment with different colors, shapes, lengths, translation and rotation amounts.
 
-## USEFUL P5js METHODS & VARIABLES
+## USEFUL P5js METHODS AND VARIABLES
 
 - `createCanvas(width, height)`
     - attaches an html canvas to the DOM.
